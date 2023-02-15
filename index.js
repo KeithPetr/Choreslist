@@ -5,25 +5,31 @@ const listOutputEl = document.getElementById("list-output");
 
 let choreArray = [];
 
-function renderList() {
-  let chore = itemInputEl.value;
-  let string = "";
-  if (itemInputEl.value == "") {
+addBtn.addEventListener("click", function () {
+  if (itemInputEl.value === "") {
   } else {
-    choreArray.push(chore);
-    for (let chore of choreArray) {
-      string = `
-    <div class="list-item">${chore}</div>
-    `;
-    console.log(string)
-    }
-    listOutputEl.innerHTML += string;
+    choreArray.push(itemInputEl.value);
     itemInputEl.value = "";
-    console.log(listOutputEl)
+    renderArray(choreArray);
   }
-}
+});
 
-function removeItem() {
-    
+removeBtn.addEventListener("click", function () {
+  if (choreArray.length === 0) {
+  } else {
+    choreArray.pop();
+    console.log(choreArray);
+    itemInputEl.value = "";
+    renderArray(choreArray);
+  }
+});
+
+function renderArray(chores) {
+  let string = "";
+  for (let i = 0; i < chores.length; i++) {
+    string += `
+        <div class="list-item">${choreArray[i]}</div>
+        `;
+  }
+  listOutputEl.innerHTML = string;
 }
-addBtn.addEventListener("click", renderList);

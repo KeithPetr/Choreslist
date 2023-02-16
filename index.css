@@ -15,6 +15,8 @@ body {
   border: 5px solid #111827;
   border-radius: 10px;
   justify-content: center;
+  min-width: 320px;
+  max-width: 432px;
 }
 
 .list-container {
@@ -25,7 +27,6 @@ body {
 
 .add-chores-section {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 1em;
 }
 
@@ -35,6 +36,9 @@ body {
   background: #EEEEEE;
   text-align: center;
   border-radius: 5px;
+  width: 100%;
+  max-width: 315px;
+  font-size: 1.25em;
 }
 
 button {
@@ -42,8 +46,16 @@ button {
     border-radius: 5px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
 .add-btn {
-  margin: 0;
+  margin: 0 .5em;
   background: #FFCC68;
 }
 
@@ -53,27 +65,15 @@ button {
 
 .list-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     background: #FBDF7C;
-    margin-bottom: .5em;
+    margin: 0 0 .5em 0;
     height: 33px;
     border-radius: 5px;
-    padding: 0 10px;
-}
-
-.remove-chore {
-  display: flex;
-  border-radius: 50%;
-  background: #f5bebe;
-}
-
-.remove-chore:hover {
-  cursor: pointer;
-}
-
-.remove-chore:active {
-  transform: translateY(2px);
+    padding: 0.5em .75em 0.5em 1em;
+    font-weight: 700;
+    font-size: 1.5em;
 }
 
 .X {
@@ -81,6 +81,10 @@ button {
 }
 
 .X:hover {
+  cursor: pointer;
   filter: invert(33%) sepia(99%) saturate(4661%) hue-rotate(347deg) brightness(118%) contrast(111%);
 }
 
+.all-done-gif {
+  width: 100%;
+}

@@ -47,16 +47,40 @@ button {
   background: #FFCC68;
 }
 
-.remove-btn {
+.clear-btn {
     background: #FF9548;
 }
 
 .list-item {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background: #FBDF7C;
     margin-bottom: .5em;
     height: 33px;
     border-radius: 5px;
+    padding: 0 10px;
 }
+
+.remove-chore {
+  display: flex;
+  border-radius: 50%;
+  background: #f5bebe;
+}
+
+.remove-chore:hover {
+  cursor: pointer;
+}
+
+.remove-chore:active {
+  transform: translateY(2px);
+}
+
+.X {
+  border: 1px solid black;
+}
+
+.X:hover {
+  filter: invert(33%) sepia(99%) saturate(4661%) hue-rotate(347deg) brightness(118%) contrast(111%);
+}
+

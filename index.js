@@ -14,6 +14,22 @@ if (choreArrayFromStorage) {
   renderArray(choreArray);
 }
 
+itemInputEl.addEventListener("keyup", function (e) {
+  // Check if the key pressed is the Enter key
+  if (e.keyCode === 13) {
+    // Get the value from the input field
+    const choreText = itemInputEl.value;
+    // If the value is not empty and is not already in the array, add it to the array
+    if (choreText !== "" && !choreArray.includes(choreText)) {
+      choreArray.push(choreText);
+      itemInputEl.value = "";
+      localStorage.setItem("choreArray", JSON.stringify(choreArray));
+      renderArray(choreArray);
+    }
+  }
+  console.log('enter')
+});
+
 addBtn.addEventListener("click", function () {
   if (itemInputEl.value === "" || choreArray.includes(itemInputEl.value)) {
   } else {

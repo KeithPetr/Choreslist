@@ -56,11 +56,13 @@ button:active {
 
 .add-btn {
   margin: 0 .5em;
-  background: #FFCC68;
+  background: #FFCC68 url(images/Arrow.svg) center center no-repeat;
+  padding: 1em 1.5em;
 }
 
 .clear-btn {
-    background: #FF9548;
+    background: #FF9548 url(images/X.svg) center center no-repeat;
+    padding: 1em 1.5em;
 }
 
 .list-item {
@@ -69,7 +71,6 @@ button:active {
     justify-content: space-between;
     background: #FBDF7C;
     margin: 0 0 .5em 0;
-    height: 33px;
     border-radius: 5px;
     padding: 0.5em .75em 0.5em 1em;
     font-weight: 700;
